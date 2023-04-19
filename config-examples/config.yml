@@ -119,7 +119,7 @@ total-scraped-limit: 100-150
 # Ending Session Conditions
 ##############################################################################
 
-end-if-likes-limit-reached: true
+end-if-likes-limit-reached: false
 end-if-follows-limit-reached: false
 end-if-watches-limit-reached: false
 end-if-comments-limit-reached: false

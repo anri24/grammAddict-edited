@@ -2,6 +2,9 @@ import logging
 import random
 from datetime import datetime, timedelta
 from time import sleep
+import time
+from multiprocessing import Process
+from threading import Thread
 
 from colorama import Fore, Style
 
@@ -64,6 +67,8 @@ from GramAddict.core.views import load_config as load_views
 
 
 def start_bot(**kwargs):
+    process = Thread(target=start_bot)
+
     # Logging initialization
     logger = logging.getLogger(__name__)
 
@@ -274,13 +279,18 @@ def start_bot(**kwargs):
                     "At last one of these limits has been reached: interactions/successful or scraped. Ending session.",
                     extra={"color": f"{Fore.CYAN}"},
                 )
-                decorators.restart(
-                    device,
-                    sessions,
-                    session_state,
-                    configs,)
-                device.back()
                 
+                close_instagram(device)
+                print('bot is sleeping')
+                print('it will start again after 1 hour')
+                sec = 60*60
+                time = datetime.now() + timedelta(seconts=sec)
+                print("it will start at "+time)
+                time.sleep(60 * 60)
+                process.start()
+                process.join()
+                open_instagram(device)
+
             if profile_view.getUsername() != session_state.my_username:
                 logger.debug("Not in your main profile.")
                 tab_bar_view.navigateToProfile()
@@ -289,22 +299,36 @@ def start_bot(**kwargs):
                     logger.warning(
                         "Scraping in unfollow-jobs doesn't make any sense. SKIP. "
                     )
-                    decorators.restart(device,
-                    sessions,
-                    session_state,
-                    configs,)
-                    device.back()
+                    
+                    close_instagram(device)
+                    print('bot is sleeping')
+                    print('it will start again after 1 hour')
+                    sec = 60*60
+                    time = datetime.now() + timedelta(seconts=sec)
+                    print("it will start at "+time)
+                    time.sleep(60 * 60)
+                    process.start()
+                    process.join()
+                    open_instagram(device)
 
                 if unfollow_limit_reached:
                     logger.warning(
                         f"Can't perform {plugin} job because the unfollow limit has been reached. SKIP."
                     )
                     print_limits = None
-                    decorators.restart(device,
-                    sessions,
-                    session_state,
-                    configs,)
-                    device.back()
+                    
+                    close_instagram(device)
+                    print('bot is sleeping')
+                    print('it will start again after 1 hour')
+                    sec = 60*60
+                    time = datetime.now() + timedelta(seconts=sec)
+                    print("it will start at "+time)
+                    time.sleep(60 * 60)
+                    process.start()
+                    process.join()
+
+                    open_instagram(device)
+                    print('here')
 
                 logger.info(
                     f"Current unfollow-job: {plugin}",
@@ -322,22 +346,36 @@ def start_bot(**kwargs):
                     )
                     print_limits = None
                     if unfollow_jobs:
-                        decorators.restart(device,
-                    sessions,
-                    session_state,
-                    configs,)
-                        device.back()
                         
+                        close_instagram(device)
+                        print('bot is sleeping')
+                        print('it will start again after 1 hour')
+                        sec = 60*60
+                        time = datetime.now() + timedelta(seconts=sec)
+                        print("it will start at "+time)
+                        time.sleep(60 * 60)
+                        process.start()
+                        process.join()
+                        open_instagram(device)
+                        print('here')
+
                     else:
                         logger.info(
                             "No other jobs can be done cause of limit reached. Ending session.",
                             extra={"color": f"{Fore.CYAN}"},
                         )
-                        decorators.restart(device,
-                        sessions,
-                        session_state,
-                        configs,)
-                        device.back()
+                        
+                        close_instagram(device)
+                        print('bot is sleeping')
+                        print('it will start again after 1 hour')
+                        sec = 60*60
+                        time = datetime.now() + timedelta(seconts=sec)
+                        print("it will start at "+time)
+                        time.sleep(60 * 60)
+                        process.start()
+                        process.join()
+                        open_instagram(device)
+                        print('here')
 
                 logger.info(
                     f"Current active-job: {plugin}",
@@ -445,3 +483,5 @@ def start_bot(**kwargs):
     ask_for_a_donation()
 
 
+    if process.is_alive() == False:
+        start_bot()
