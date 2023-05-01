@@ -283,10 +283,11 @@ def start_bot(**kwargs):
                 close_instagram(device)
                 print('bot is sleeping')
                 print('it will start again after 1 hour')
-                sec = 60*60
-                time = datetime.now() + timedelta(seconts=sec)
-                print("it will start at "+time)
-                time.sleep(60 * 60)
+                hour = 60*60
+                time = datetime.now() + timedelta(seconds=hour)
+                print(time)
+                print(f"it will start at {time}")
+                sleep(hour)
                 process.start()
                 process.join()
                 open_instagram(device)
@@ -303,10 +304,11 @@ def start_bot(**kwargs):
                     close_instagram(device)
                     print('bot is sleeping')
                     print('it will start again after 1 hour')
-                    sec = 60*60
-                    time = datetime.now() + timedelta(seconts=sec)
-                    print("it will start at "+time)
-                    time.sleep(60 * 60)
+                    hour = 60*60
+                    time = datetime.now() + timedelta(seconds=hour)
+
+                    print(f"it will start at {time}")
+                    sleep(hour)
                     process.start()
                     process.join()
                     open_instagram(device)
@@ -320,15 +322,13 @@ def start_bot(**kwargs):
                     close_instagram(device)
                     print('bot is sleeping')
                     print('it will start again after 1 hour')
-                    sec = 60*60
-                    time = datetime.now() + timedelta(seconts=sec)
-                    print("it will start at "+time)
-                    time.sleep(60 * 60)
+                    hour = 60*60
+                    time = datetime.now() + timedelta(seconds=hour)
+                    print(f"it will start at {time}")
+                    sleep(hour)
                     process.start()
                     process.join()
-
                     open_instagram(device)
-                    print('here')
 
                 logger.info(
                     f"Current unfollow-job: {plugin}",
@@ -350,14 +350,13 @@ def start_bot(**kwargs):
                         close_instagram(device)
                         print('bot is sleeping')
                         print('it will start again after 1 hour')
-                        sec = 60*60
-                        time = datetime.now() + timedelta(seconts=sec)
-                        print("it will start at "+time)
-                        time.sleep(60 * 60)
+                        hour = 60*60
+                        time = datetime.now() + timedelta(seconds=hour)
+                        print(f"it will start at {time}")
+                        sleep(hour)
                         process.start()
                         process.join()
                         open_instagram(device)
-                        print('here')
 
                     else:
                         logger.info(
@@ -368,14 +367,13 @@ def start_bot(**kwargs):
                         close_instagram(device)
                         print('bot is sleeping')
                         print('it will start again after 1 hour')
-                        sec = 60*60
-                        time = datetime.now() + timedelta(seconts=sec)
-                        print("it will start at "+time)
-                        time.sleep(60 * 60)
+                        hour = 60*60
+                        time = datetime.now() + timedelta(seconds=hour)
+                        print(f"it will start at {time}")
+                        sleep(hour)
                         process.start()
                         process.join()
                         open_instagram(device)
-                        print('here')
 
                 logger.info(
                     f"Current active-job: {plugin}",

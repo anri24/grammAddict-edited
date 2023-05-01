@@ -17,7 +17,7 @@ accounts
 Pipfile
 Pipfile.lock
 *.pdf
-*.txt
+# *.txt
 *.mp4
 *.log*
 *.ini
