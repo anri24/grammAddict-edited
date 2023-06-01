@@ -7,7 +7,7 @@ from socket import timeout
 
 from colorama import Fore, Style
 from uiautomator2.exceptions import UiObjectNotFoundError
-
+from . import bot_flow
 from GramAddict.core.device_facade import DeviceFacade
 from GramAddict.core.report import print_full_report
 from GramAddict.core.utils import (
@@ -126,7 +126,8 @@ def restart(
             logger.error(
                 "Reached crashes limit. Bot has crashed too much! Please check what's going on."
             )
-            stop_bot(device, sessions, session_state)
+            # stop_bot(device, sessions, session_state)
+            
         logger.info("Something unexpected happened. Let's try again.")
     close_instagram(device)
     check_if_crash_popup_is_there(device)
@@ -134,5 +135,6 @@ def restart(
     if not open_instagram(device):
         print_full_report(sessions, configs.args.scrape_to_file)
         sessions.persist(directory=session_state.my_username)
-        sys.exit(2)
+        # sys.exit(2)
+        bot_flow.start_bot()
     TabBarView(device).navigateToProfile()

@@ -12,7 +12,6 @@
 *.pyc
 .DS_Store
 crashes
-accounts
 !config-examples/*
 Pipfile
 Pipfile.lock
