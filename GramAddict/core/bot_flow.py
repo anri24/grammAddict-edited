@@ -256,7 +256,7 @@ def start_bot(**kwargs):
         filters = Filter(storage)
         show_ending_conditions()
         if not configs.args.debug:
-            countdown(10, "Bot will start in: ")
+            countdown(3, "Bot will start in: ")
         for plugin in jobs_list:
             inside_working_hours, time_left = SessionState.inside_working_hours(
                 configs.args.working_hours, configs.args.time_delta_session

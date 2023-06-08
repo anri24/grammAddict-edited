@@ -2,7 +2,7 @@ import os
 import shutil
 import subprocess as sp
 
-username = input('what is your accounts username? ')
+username = input('what is your accounts username ? ')
 config_dir = 'accounts/'+username
 config_ex = 'config-examples'
 dest = 'accounts/'+username
