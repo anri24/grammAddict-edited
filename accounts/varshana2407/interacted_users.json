@@ -838,5 +838,47 @@
         "unfollowed": false,
         "scraped": false,
         "pm_sent": false
+    },
+    "tropicurbex": {
+        "last_interaction": "2023-06-08 19:19:34.992977",
+        "following_status": "none",
+        "session_id": "5e97d220-0d30-45a1-8521-3167f09df9f4",
+        "job_name": "place-likers-recent",
+        "target": "france",
+        "liked": 0,
+        "watched": 0,
+        "commented": 0,
+        "followed": false,
+        "unfollowed": false,
+        "scraped": false,
+        "pm_sent": false
+    },
+    "zolli90_": {
+        "last_interaction": "2023-06-08 19:19:44.558111",
+        "following_status": "none",
+        "session_id": "5e97d220-0d30-45a1-8521-3167f09df9f4",
+        "job_name": "place-likers-recent",
+        "target": "france",
+        "liked": 0,
+        "watched": 0,
+        "commented": 0,
+        "followed": false,
+        "unfollowed": false,
+        "scraped": false,
+        "pm_sent": false
+    },
+    "tropicusss": {
+        "last_interaction": "2023-06-08 19:19:57.102946",
+        "following_status": "none",
+        "session_id": "5e97d220-0d30-45a1-8521-3167f09df9f4",
+        "job_name": "place-likers-recent",
+        "target": "france",
+        "liked": 0,
+        "watched": 0,
+        "commented": 0,
+        "followed": false,
+        "unfollowed": false,
+        "scraped": false,
+        "pm_sent": false
     }
 }

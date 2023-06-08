@@ -14,10 +14,18 @@ if(config == False):
         answer = noAccountFile[0]
     if noAccountFile == '' or answer == "y":
         shutil.copytree(config_ex, dest) 
-        print()
-        print('config file is created go inside and chage other importent things ('+ dest +'/config.yml)')
-        sp.Popen(["notepad.exe", dest +"/config.yml"])
+        firstConf = sp.Popen(["notepad.exe", dest +"/config.yml"])
+        firstConf.wait()
+        os.system('python run.py --config accounts/'+ username +'/config.yml')
     elif answer == "n":
         exit 
 else:
-    os.system('python run.py --config accounts/'+ username +'/config.yml')
+    changeConfig = input("do you want to change config file ? (yes/no) ") 
+    if (len(changeConfig) > 0):
+        answer = changeConfig[0]
+    if changeConfig == '' or answer == "y":
+        secondConf = sp.Popen(["notepad.exe", "accounts/"+username +"/config.yml"])
+        secondConf.wait()
+        os.system('python run.py --config accounts/'+ username +'/config.yml')
+    elif answer == "n":
+        os.system('python run.py --config accounts/'+ username +'/config.yml')
