@@ -1,0 +1,34 @@
+{
+    "technicaltvc": {
+        "datetime": "2023-04-27 14:20:58.293078",
+        "followers": 0,
+        "followings": 1,
+        "mutual_friends": 0,
+        "follow_button_text": "NONE",
+        "is_restricted": false,
+        "is_private": false,
+        "has_business_category": false,
+        "posts_count": 0,
+        "biography": "",
+        "link_in_bio": null,
+        "fullname": "",
+        "potency_ratio": 0.0,
+        "skip_reason": "NOT_LOADED"
+    },
+    "rezadolati01": {
+        "datetime": "2023-05-04 18:08:32.449978",
+        "followers": 0,
+        "followings": 1,
+        "mutual_friends": 0,
+        "follow_button_text": "NONE",
+        "is_restricted": false,
+        "is_private": false,
+        "has_business_category": false,
+        "posts_count": 0,
+        "biography": "",
+        "link_in_bio": null,
+        "fullname": "",
+        "potency_ratio": 0.0,
+        "skip_reason": "NOT_LOADED"
+    }
+}
