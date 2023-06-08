@@ -15,7 +15,6 @@ if(config == False):
         shutil.copytree(config_ex, dest) 
         print()
         print('config file is created go inside and chage other importent things ('+ dest +'/config.yml)')
-        os.system('code .')
     elif answer == "n":
         exit 
 else:
