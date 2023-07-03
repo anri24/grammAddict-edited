@@ -27,6 +27,7 @@ from GramAddict.core.utils import (
     random_sleep,
     save_crash,
 )
+import audioSettings
 
 
 
@@ -315,6 +316,7 @@ class SearchView:
             TabBarView(self.device).navigateToHome()
             TabBarView(self.device).navigateToSearch()
         logger.error("Can't find the search bar!")
+        audioSettings.talk("error, Can't find the search bar!")
         return None
 
     def _getUsernameRow(self, username):
@@ -1046,6 +1048,7 @@ class AccountView:
             return LanguageView(self.device)
         else:
             logger.error("Not able to set your app in English! Do it by yourself!")
+            audioSettings.talk("error, application need english language")
             exit(0)
 
     def changeToUsername(self, username: str):
@@ -1056,6 +1059,7 @@ class AccountView:
             if current_profile_name.strip().upper() == username.upper():
                 logger.info(
                     f"You are already logged as {username}!",
+                    
                     extra={"color": f"{Style.BRIGHT}{Fore.BLUE}"},
                 )
                 return True
@@ -1070,6 +1074,7 @@ class AccountView:
                     logger.error(
                         "Cannot find action bar (where you select your account)!"
                     )
+                    audioSettings.talk("error, Cannot find action bar (where you select your account)!")
         return False
 
     def _find_username(self, username, has_scrolled=False):
@@ -1129,6 +1134,7 @@ class SettingsView:
             return AccountView(self.device)
         else:
             logger.error("Not able to set your app in English! Do it by yourself!")
+            audioSettings.talk("error, Not able to set your app in English! Do it by yourself!")
             exit(2)
 
 
@@ -1147,6 +1153,7 @@ class OptionsView:
             return SettingsView(self.device)
         else:
             logger.error("Not able to set your app in English! Do it by yourself!")
+            audioSettings.talk("error, Not able to set your app in English! Do it by yourself!")
             exit(0)
 
 
@@ -1360,6 +1367,7 @@ class OpenedPostView:
                 return obj
             logger.debug("Can't find likers list, try again..")
         logger.error("Can't load likers list..")
+        audioSettings.talk("error, Can't load likers list..")
         return None
 
     def _getUserContainer(self):

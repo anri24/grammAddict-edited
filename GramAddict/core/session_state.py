@@ -5,6 +5,7 @@ from enum import Enum, auto
 from json import JSONEncoder
 
 from GramAddict.core.utils import get_value
+import audioSettings
 
 logger = logging.getLogger(__name__)
 
@@ -147,6 +148,7 @@ class SessionState:
             f"- Total Crashes:\t\t\t\t{'Limit Reached' if total_crashes else 'OK'} ({self.totalCrashes}/{self.args.current_crashes_limit})",
             f"- Total Successful Scraped Users:\t\t{'Limit Reached' if total_scraped else 'OK'} ({sum(self.totalScraped.values())}/{self.args.current_scraped_limit})",
         ]
+        
 
         if limit_type == SessionState.Limit.ALL:
             if output is not None:
@@ -175,15 +177,19 @@ class SessionState:
         elif limit_type == SessionState.Limit.LIKES:
             if output:
                 logger.info(session_info[1])
+
             else:
                 logger.debug(session_info[1])
+
             return total_likes
 
         elif limit_type == SessionState.Limit.COMMENTS:
             if output:
                 logger.info(session_info[2])
+
             else:
                 logger.debug(session_info[2])
+
             return total_comments
 
         elif limit_type == SessionState.Limit.PM:
@@ -231,8 +237,12 @@ class SessionState:
         elif limit_type == SessionState.Limit.CRASHES:
             if output:
                 logger.info(session_info[9])
+                audioSettings.talk(session_info[9])
+
             else:
                 logger.debug(session_info[9])
+                audioSettings.talk(session_info[9])
+
             return total_crashes
 
         elif limit_type == SessionState.Limit.SCRAPED:

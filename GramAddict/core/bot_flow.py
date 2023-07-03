@@ -63,10 +63,12 @@ from GramAddict.core.utils import (
 )
 from GramAddict.core.views import AccountView, ProfileView, TabBarView, UniversalActions
 from GramAddict.core.views import load_config as load_views
+import audioSettings
 
 
 
 def start_bot(**kwargs):
+   
     process = Thread(target=start_bot)
 
     # Logging initialization
@@ -158,6 +160,7 @@ def start_bot(**kwargs):
                 logger.error(
                     "Can't unlock your screen. There may be a passcode on it. If you would like your screen to be turned on and unlocked automatically, please remove the passcode."
                 )
+                audioSettings.talk("can't unlock your screen, please remove passcode.")
                 stop_bot(device, sessions, session_state, was_sleeping=False)
 
         logger.info("Device screen ON and unlocked.")
@@ -257,6 +260,8 @@ def start_bot(**kwargs):
         show_ending_conditions()
         if not configs.args.debug:
             countdown(3, "Bot will start in: ")
+            audioSettings.talk("bot is starting")
+            
         for plugin in jobs_list:
             inside_working_hours, time_left = SessionState.inside_working_hours(
                 configs.args.working_hours, configs.args.time_delta_session
@@ -266,6 +271,7 @@ def start_bot(**kwargs):
                     "Outside of working hours. Ending session.",
                     extra={"color": f"{Fore.CYAN}"},
                 )
+                audioSettings.talk("Outside of working hours. Ending session.")
                 break
             (
                 active_limits_reached,
@@ -279,14 +285,13 @@ def start_bot(**kwargs):
                     "At last one of these limits has been reached: interactions/successful or scraped. Ending session.",
                     extra={"color": f"{Fore.CYAN}"},
                 )
-                
+                audioSettings.talk("one of these limits has been reached and bot stops working for few hours")
                 close_instagram(device)
                 print('bot is sleeping')
-                print('it will start again after 1 hour')
-                hour = 60*60
+                print('it will start again after 2 hour')
+                hour = 60*60*2
                 time = datetime.now() + timedelta(seconds=hour)
-                print(time)
-                print(f"it will start at {time}")
+                print(f"it will start at {time.strftime('%H:%M:%S')}")
                 sleep(hour)
                 process.start()
                 process.join()
@@ -300,7 +305,7 @@ def start_bot(**kwargs):
                     logger.warning(
                         "Scraping in unfollow-jobs doesn't make any sense. SKIP. "
                     )
-                    
+                    audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
                     close_instagram(device)
                     print('bot is sleeping')
                     print('it will start again after 1 hour')
@@ -318,7 +323,8 @@ def start_bot(**kwargs):
                         f"Can't perform {plugin} job because the unfollow limit has been reached. SKIP."
                     )
                     print_limits = None
-                    
+
+                    audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
                     close_instagram(device)
                     print('bot is sleeping')
                     print('it will start again after 1 hour')
@@ -347,6 +353,8 @@ def start_bot(**kwargs):
                     print_limits = None
                     if unfollow_jobs:
                         
+                        audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
+
                         close_instagram(device)
                         print('bot is sleeping')
                         print('it will start again after 1 hour')
@@ -364,6 +372,7 @@ def start_bot(**kwargs):
                             extra={"color": f"{Fore.CYAN}"},
                         )
                         
+                        audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
                         close_instagram(device)
                         print('bot is sleeping')
                         print('it will start again after 1 hour')
@@ -432,10 +441,12 @@ def start_bot(**kwargs):
             inside_working_hours, time_left = SessionState.inside_working_hours(
                 configs.args.working_hours, configs.args.time_delta_session
             )
+            
             if inside_working_hours:
                 time_left = (
                     get_value(configs.args.repeat, "Sleep for {} minutes.", 180) * 60
                 )
+                
                 print_telegram_reports(
                     configs,
                     telegram_reports_at_end,
@@ -447,6 +458,7 @@ def start_bot(**kwargs):
                     f'Next session will start at: {(datetime.now() + timedelta(seconds=time_left)).strftime("%H:%M:%S (%Y/%m/%d)")}.'
                 )
                 try:
+                   
                     sleep(time_left)
                 except KeyboardInterrupt:
                     stop_bot(

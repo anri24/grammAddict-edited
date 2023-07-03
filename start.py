@@ -1,12 +1,15 @@
 import os 
 import shutil
 import subprocess as sp
+import audioSettings
 
 username = input('what is your accounts username ? ')
 config_dir = 'accounts/'+username
 config_ex = 'config-examples'
 dest = 'accounts/'+username
 config = os.path.exists(config_dir)
+
+
 
 if(config == False):
     noAccountFile = input("There is no account's config file, do you want to create new ? (yes/no) ") 
@@ -15,7 +18,7 @@ if(config == False):
     if noAccountFile == '' or answer == "y":
         shutil.copytree(config_ex, dest) 
         firstConf = sp.Popen(["notepad.exe", dest +"/config.yml"])
-        firstConf.wait()
+        firstConf.wait()        
         os.system('python run.py --config accounts/'+ username +'/config.yml')
     elif answer == "n":
         exit 

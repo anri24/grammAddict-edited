@@ -9,7 +9,7 @@
 ##############################################################################
 
 username: varshana2407 # you have to put your IG name here!
-device: 127.0.0.1:21503 # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
+# device: 127.0.0.1:21513 # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
 app-id: com.instagram.android
 use-cloned-app: false
 screen-sleep: true
@@ -21,7 +21,7 @@ disable-block-detection: false
 disable-filters: false
 dont-type: false
 # scrape-to-file: scraped.txt
-total-crashes-limit: 100
+total-crashes-limit: 5
 count-app-crashes: false
 shuffle-jobs: true
 truncate-sources: 2-5
@@ -54,11 +54,11 @@ watch-photo-time: 3-4
 delete-interacted-users: true
 
 ## Unfollow (unfollow jobs)
-unfollow: 10-20
-unfollow-any: 10-20
-unfollow-non-followers: 10-20
-unfollow-any-non-followers: 10-20
-unfollow-any-followers: 10-20
+unfollow: 1-2
+unfollow-any: 1-2
+unfollow-non-followers: 1-2
+unfollow-any-non-followers: 1-2
+unfollow-any-followers: 1-2
 unfollow-from-file: [usernames1.txt 7-15, usernames2.txt 6]
 
 ## Special modifier for unfollow jobs
@@ -83,20 +83,20 @@ telegram-reports: false # for using telegram-reports you have also to configure 
 # Source Limits
 ##############################################################################
 
-interactions-count: 30-40
+interactions-count: 1-2
 likes-count: 1-2
 likes-percentage: 100
 stories-count: 1-2
-stories-percentage: 30-40
+stories-percentage: 1-2
 carousel-count: 2-3
-carousel-percentage: 60-70
+carousel-percentage: 1-2
 max-comments-pro-user: 1-2
 # comment-percentage: 30-40
 # pm-percentage: 30-40
-interact-percentage: 30-40
-follow-percentage: 30-40
+interact-percentage: 1-2
+follow-percentage: 1-2
 follow-limit: 50
-skipped-list-limit: 10-15
+skipped-list-limit: 1-2
 skipped-posts-limit: 5
 fling-when-skipped: 0
 min-following: 100
@@ -105,15 +105,15 @@ min-following: 100
 # Total Limits Per Session
 ##############################################################################
 
-total-likes-limit: 120-150
-total-follows-limit: 40-50
-total-unfollows-limit: 40-50
-total-watches-limit: 120-150
-total-successful-interactions-limit: 120-150
-total-interactions-limit: 280-300
+total-likes-limit: 1-2
+total-follows-limit: 1-2
+total-unfollows-limit: 1-2
+total-watches-limit: 1-2
+total-successful-interactions-limit: 1-2
+total-interactions-limit: 1-2
 total-comments-limit: 3-5
 total-pm-limit: 3-5
-total-scraped-limit: 100-150
+total-scraped-limit: 1-2
 
 ##############################################################################
 # Ending Session Conditions

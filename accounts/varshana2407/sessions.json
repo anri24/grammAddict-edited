@@ -173,5 +173,1043 @@
             "followers": 28,
             "following": 116
         }
+    },
+    {
+        "id": "bd48fd8b-7c05-40f2-8a14-5cb0899ad9b8",
+        "total_interactions": 0,
+        "successful_interactions": 0,
+        "total_followed": 0,
+        "total_likes": 23,
+        "total_comments": 0,
+        "total_pm": 0,
+        "total_watched": 0,
+        "total_unfollowed": 0,
+        "total_scraped": {},
+        "start_time": "2023-06-09 14:21:50.026515",
+        "finish_time": "None",
+        "args": {
+            "config": "accounts/varshana2407/config.yml",
+            "unfollow": "10-20",
+            "unfollow_non_followers": "10-20",
+            "unfollow_any_non_followers": "10-20",
+            "unfollow_any_followers": "10-20",
+            "unfollow_any": "10-20",
+            "min_following": "100",
+            "sort_followers_newest_to_oldest": false,
+            "unfollow_delay": "15",
+            "app_id": "com.instagram.android",
+            "use_cloned_app": false,
+            "device": "127.0.0.1:21503",
+            "username": "varshana2407",
+            "likes_count": "1-2",
+            "likes_percentage": "100",
+            "total_likes_limit": "120-150",
+            "total_follows_limit": "40-50",
+            "total_unfollows_limit": "40-50",
+            "total_watches_limit": "120-150",
+            "total_successful_interactions_limit": "120-150",
+            "total_interactions_limit": "280-300",
+            "stories_count": "1-2",
+            "stories_percentage": "30-40",
+            "carousel_count": "2-3",
+            "carousel_percentage": "60-70",
+            "watch_video_time": "15-35",
+            "watch_photo_time": "3-4",
+            "interactions_count": "30-40",
+            "interact_percentage": "30-40",
+            "can_reinteract_after": null,
+            "repeat": "280-320",
+            "follow_percentage": "30-40",
+            "follow_limit": "50",
+            "skipped_list_limit": "10-15",
+            "fling_when_skipped": "0",
+            "speed_multiplier": "1",
+            "screen_sleep": true,
+            "debug": false,
+            "screen_record": false,
+            "close_apps": false,
+            "interact": null,
+            "hashtag_likers": null,
+            "delete_interacted_users": true,
+            "scrape_to_file": null,
+            "total_scraped_limit": "100-150",
+            "comment_percentage": "0",
+            "total_comments_limit": "3-5",
+            "pm_percentage": "0",
+            "total_pm_limit": "3-5",
+            "max_comments_pro_user": "1-2",
+            "end_if_likes_limit_reached": true,
+            "end_if_follows_limit_reached": false,
+            "end_if_watches_limit_reached": false,
+            "end_if_comments_limit_reached": false,
+            "end_if_pm_limit_reached": false,
+            "truncate_sources": "2-5",
+            "shuffle_jobs": true,
+            "working_hours": [
+                "10.15-16.40",
+                "18.15-22.46"
+            ],
+            "time_delta": "10-15",
+            "disable_filters": false,
+            "total_crashes_limit": "100",
+            "count_app_crashes": false,
+            "skipped_posts_limit": "5",
+            "uia_version": 2,
+            "total_sessions": "1",
+            "disable_block_detection": true,
+            "pre_script": null,
+            "post_script": null,
+            "move_folders_in_accounts": false,
+            "dont_type": false,
+            "analytics": false,
+            "blogger": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "interact_from_file": [
+                "usernames1.txt 10-15",
+                "usernames2.txt 3"
+            ],
+            "unfollow_from_file": [
+                "usernames1.txt 7-15",
+                "usernames2.txt 6"
+            ],
+            "blogger_followers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_following": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_likers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_limits": 0,
+            "feed": "2-5",
+            "hashtag_likers_top": [
+                "php",
+                "python"
+            ],
+            "hashtag_likers_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_top": [
+                "php",
+                "python"
+            ],
+            "place_likers_top": [
+                "switzerland",
+                "france"
+            ],
+            "place_likers_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_top": [
+                "switzerland",
+                "france"
+            ],
+            "posts_from_file": [
+                "posts.txt"
+            ],
+            "remove_followers_from_file": [
+                "remove1.txt 5-10",
+                "remove2.txt 6"
+            ],
+            "delete_removed_followers": true,
+            "telegram_reports": false,
+            "time_delta_session": -604,
+            "current_likes_limit": 125,
+            "current_follow_limit": 44,
+            "current_unfollow_limit": 50,
+            "current_comments_limit": 5,
+            "current_pm_limit": 5,
+            "current_watch_limit": 121,
+            "current_success_limit": 121,
+            "current_total_limit": 287,
+            "current_scraped_limit": 137,
+            "current_crashes_limit": 100
+        },
+        "profile": {
+            "posts": 0,
+            "followers": 28,
+            "following": 100
+        }
+    },
+    {
+        "id": "7e9d1914-2d88-4fb7-8064-15b49a916b1a",
+        "total_interactions": 0,
+        "successful_interactions": 0,
+        "total_followed": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "total_pm": 0,
+        "total_watched": 0,
+        "total_unfollowed": 0,
+        "total_scraped": {},
+        "start_time": "2023-07-03 15:43:14.265821",
+        "finish_time": "None",
+        "args": {
+            "config": "accounts/varshana2407/config.yml",
+            "unfollow": "1-2",
+            "unfollow_non_followers": "1-2",
+            "unfollow_any_non_followers": "1-2",
+            "unfollow_any_followers": "1-2",
+            "unfollow_any": "1-2",
+            "min_following": "100",
+            "sort_followers_newest_to_oldest": false,
+            "unfollow_delay": "15",
+            "app_id": "com.instagram.android",
+            "use_cloned_app": false,
+            "device": null,
+            "username": "varshana2407",
+            "likes_count": "1-2",
+            "likes_percentage": "100",
+            "total_likes_limit": "1-2",
+            "total_follows_limit": "1-2",
+            "total_unfollows_limit": "1-2",
+            "total_watches_limit": "1-2",
+            "total_successful_interactions_limit": "1-2",
+            "total_interactions_limit": "1-2",
+            "stories_count": "1-2",
+            "stories_percentage": "1-2",
+            "carousel_count": "2-3",
+            "carousel_percentage": "1-2",
+            "watch_video_time": "15-35",
+            "watch_photo_time": "3-4",
+            "interactions_count": "1-2",
+            "interact_percentage": "1-2",
+            "can_reinteract_after": null,
+            "repeat": "280-320",
+            "follow_percentage": "1-2",
+            "follow_limit": "50",
+            "skipped_list_limit": "1-2",
+            "fling_when_skipped": "0",
+            "speed_multiplier": "1",
+            "screen_sleep": true,
+            "debug": false,
+            "screen_record": false,
+            "close_apps": false,
+            "interact": null,
+            "hashtag_likers": null,
+            "delete_interacted_users": true,
+            "scrape_to_file": null,
+            "total_scraped_limit": "1-2",
+            "comment_percentage": "0",
+            "total_comments_limit": "3-5",
+            "pm_percentage": "0",
+            "total_pm_limit": "3-5",
+            "max_comments_pro_user": "1-2",
+            "end_if_likes_limit_reached": true,
+            "end_if_follows_limit_reached": false,
+            "end_if_watches_limit_reached": false,
+            "end_if_comments_limit_reached": false,
+            "end_if_pm_limit_reached": false,
+            "truncate_sources": "2-5",
+            "shuffle_jobs": true,
+            "working_hours": [
+                "10.15-16.40",
+                "18.15-22.46"
+            ],
+            "time_delta": "10-15",
+            "disable_filters": false,
+            "total_crashes_limit": "5",
+            "count_app_crashes": false,
+            "skipped_posts_limit": "5",
+            "uia_version": 2,
+            "total_sessions": "1",
+            "disable_block_detection": true,
+            "pre_script": null,
+            "post_script": null,
+            "move_folders_in_accounts": false,
+            "dont_type": false,
+            "analytics": false,
+            "blogger": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "interact_from_file": [
+                "usernames1.txt 10-15",
+                "usernames2.txt 3"
+            ],
+            "unfollow_from_file": [
+                "usernames1.txt 7-15",
+                "usernames2.txt 6"
+            ],
+            "blogger_followers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_following": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_likers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_limits": 0,
+            "feed": "2-5",
+            "hashtag_likers_top": [
+                "php",
+                "python"
+            ],
+            "hashtag_likers_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_top": [
+                "php",
+                "python"
+            ],
+            "place_likers_top": [
+                "switzerland",
+                "france"
+            ],
+            "place_likers_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_top": [
+                "switzerland",
+                "france"
+            ],
+            "posts_from_file": [
+                "posts.txt"
+            ],
+            "remove_followers_from_file": [
+                "remove1.txt 5-10",
+                "remove2.txt 6"
+            ],
+            "delete_removed_followers": true,
+            "telegram_reports": false,
+            "time_delta_session": -788,
+            "current_likes_limit": 1,
+            "current_follow_limit": 1,
+            "current_unfollow_limit": 2,
+            "current_comments_limit": 4,
+            "current_pm_limit": 4,
+            "current_watch_limit": 1,
+            "current_success_limit": 2,
+            "current_total_limit": 1,
+            "current_scraped_limit": 2,
+            "current_crashes_limit": 5
+        },
+        "profile": {
+            "posts": 0,
+            "followers": 29,
+            "following": 99
+        }
+    },
+    {
+        "id": "173e1170-99e6-46d5-b650-c775528c6b25",
+        "total_interactions": 0,
+        "successful_interactions": 0,
+        "total_followed": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "total_pm": 0,
+        "total_watched": 0,
+        "total_unfollowed": 0,
+        "total_scraped": {},
+        "start_time": "2023-07-03 15:47:10.284617",
+        "finish_time": "None",
+        "args": {
+            "config": "accounts/varshana2407/config.yml",
+            "unfollow": "1-2",
+            "unfollow_non_followers": "1-2",
+            "unfollow_any_non_followers": "1-2",
+            "unfollow_any_followers": "1-2",
+            "unfollow_any": "1-2",
+            "min_following": "100",
+            "sort_followers_newest_to_oldest": false,
+            "unfollow_delay": "15",
+            "app_id": "com.instagram.android",
+            "use_cloned_app": false,
+            "device": null,
+            "username": "varshana2407",
+            "likes_count": "1-2",
+            "likes_percentage": "100",
+            "total_likes_limit": "1-2",
+            "total_follows_limit": "1-2",
+            "total_unfollows_limit": "1-2",
+            "total_watches_limit": "1-2",
+            "total_successful_interactions_limit": "1-2",
+            "total_interactions_limit": "1-2",
+            "stories_count": "1-2",
+            "stories_percentage": "1-2",
+            "carousel_count": "2-3",
+            "carousel_percentage": "1-2",
+            "watch_video_time": "15-35",
+            "watch_photo_time": "3-4",
+            "interactions_count": "1-2",
+            "interact_percentage": "1-2",
+            "can_reinteract_after": null,
+            "repeat": "280-320",
+            "follow_percentage": "1-2",
+            "follow_limit": "50",
+            "skipped_list_limit": "1-2",
+            "fling_when_skipped": "0",
+            "speed_multiplier": "1",
+            "screen_sleep": true,
+            "debug": false,
+            "screen_record": false,
+            "close_apps": false,
+            "interact": null,
+            "hashtag_likers": null,
+            "delete_interacted_users": true,
+            "scrape_to_file": null,
+            "total_scraped_limit": "1-2",
+            "comment_percentage": "0",
+            "total_comments_limit": "3-5",
+            "pm_percentage": "0",
+            "total_pm_limit": "3-5",
+            "max_comments_pro_user": "1-2",
+            "end_if_likes_limit_reached": true,
+            "end_if_follows_limit_reached": false,
+            "end_if_watches_limit_reached": false,
+            "end_if_comments_limit_reached": false,
+            "end_if_pm_limit_reached": false,
+            "truncate_sources": "2-5",
+            "shuffle_jobs": true,
+            "working_hours": [
+                "10.15-16.40",
+                "18.15-22.46"
+            ],
+            "time_delta": "10-15",
+            "disable_filters": false,
+            "total_crashes_limit": "5",
+            "count_app_crashes": false,
+            "skipped_posts_limit": "5",
+            "uia_version": 2,
+            "total_sessions": "1",
+            "disable_block_detection": true,
+            "pre_script": null,
+            "post_script": null,
+            "move_folders_in_accounts": false,
+            "dont_type": false,
+            "analytics": false,
+            "blogger": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "interact_from_file": [
+                "usernames1.txt 10-15",
+                "usernames2.txt 3"
+            ],
+            "unfollow_from_file": [
+                "usernames1.txt 7-15",
+                "usernames2.txt 6"
+            ],
+            "blogger_followers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_following": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_likers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_limits": 0,
+            "feed": "2-5",
+            "hashtag_likers_top": [
+                "php",
+                "python"
+            ],
+            "hashtag_likers_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_top": [
+                "php",
+                "python"
+            ],
+            "place_likers_top": [
+                "switzerland",
+                "france"
+            ],
+            "place_likers_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_top": [
+                "switzerland",
+                "france"
+            ],
+            "posts_from_file": [
+                "posts.txt"
+            ],
+            "remove_followers_from_file": [
+                "remove1.txt 5-10",
+                "remove2.txt 6"
+            ],
+            "delete_removed_followers": true,
+            "telegram_reports": false,
+            "time_delta_session": -558,
+            "current_likes_limit": 2,
+            "current_follow_limit": 1,
+            "current_unfollow_limit": 2,
+            "current_comments_limit": 4,
+            "current_pm_limit": 5,
+            "current_watch_limit": 2,
+            "current_success_limit": 1,
+            "current_total_limit": 1,
+            "current_scraped_limit": 1,
+            "current_crashes_limit": 5
+        },
+        "profile": {
+            "posts": 0,
+            "followers": 29,
+            "following": 99
+        }
+    },
+    {
+        "id": "0cae8e29-294c-4163-a73e-858cc0cb149d",
+        "total_interactions": 0,
+        "successful_interactions": 0,
+        "total_followed": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "total_pm": 0,
+        "total_watched": 0,
+        "total_unfollowed": 0,
+        "total_scraped": {},
+        "start_time": "2023-07-03 15:52:38.923417",
+        "finish_time": "None",
+        "args": {
+            "config": "accounts/varshana2407/config.yml",
+            "unfollow": "1-2",
+            "unfollow_non_followers": "1-2",
+            "unfollow_any_non_followers": "1-2",
+            "unfollow_any_followers": "1-2",
+            "unfollow_any": "1-2",
+            "min_following": "100",
+            "sort_followers_newest_to_oldest": false,
+            "unfollow_delay": "15",
+            "app_id": "com.instagram.android",
+            "use_cloned_app": false,
+            "device": null,
+            "username": "varshana2407",
+            "likes_count": "1-2",
+            "likes_percentage": "100",
+            "total_likes_limit": "1-2",
+            "total_follows_limit": "1-2",
+            "total_unfollows_limit": "1-2",
+            "total_watches_limit": "1-2",
+            "total_successful_interactions_limit": "1-2",
+            "total_interactions_limit": "1-2",
+            "stories_count": "1-2",
+            "stories_percentage": "1-2",
+            "carousel_count": "2-3",
+            "carousel_percentage": "1-2",
+            "watch_video_time": "15-35",
+            "watch_photo_time": "3-4",
+            "interactions_count": "1-2",
+            "interact_percentage": "1-2",
+            "can_reinteract_after": null,
+            "repeat": "280-320",
+            "follow_percentage": "1-2",
+            "follow_limit": "50",
+            "skipped_list_limit": "1-2",
+            "fling_when_skipped": "0",
+            "speed_multiplier": "1",
+            "screen_sleep": true,
+            "debug": false,
+            "screen_record": false,
+            "close_apps": false,
+            "interact": null,
+            "hashtag_likers": null,
+            "delete_interacted_users": true,
+            "scrape_to_file": null,
+            "total_scraped_limit": "1-2",
+            "comment_percentage": "0",
+            "total_comments_limit": "3-5",
+            "pm_percentage": "0",
+            "total_pm_limit": "3-5",
+            "max_comments_pro_user": "1-2",
+            "end_if_likes_limit_reached": true,
+            "end_if_follows_limit_reached": false,
+            "end_if_watches_limit_reached": false,
+            "end_if_comments_limit_reached": false,
+            "end_if_pm_limit_reached": false,
+            "truncate_sources": "2-5",
+            "shuffle_jobs": true,
+            "working_hours": [
+                "10.15-16.40",
+                "18.15-22.46"
+            ],
+            "time_delta": "10-15",
+            "disable_filters": false,
+            "total_crashes_limit": "5",
+            "count_app_crashes": false,
+            "skipped_posts_limit": "5",
+            "uia_version": 2,
+            "total_sessions": "1",
+            "disable_block_detection": true,
+            "pre_script": null,
+            "post_script": null,
+            "move_folders_in_accounts": false,
+            "dont_type": false,
+            "analytics": false,
+            "blogger": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "interact_from_file": [
+                "usernames1.txt 10-15",
+                "usernames2.txt 3"
+            ],
+            "unfollow_from_file": [
+                "usernames1.txt 7-15",
+                "usernames2.txt 6"
+            ],
+            "blogger_followers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_following": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_likers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_limits": 0,
+            "feed": "2-5",
+            "hashtag_likers_top": [
+                "php",
+                "python"
+            ],
+            "hashtag_likers_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_top": [
+                "php",
+                "python"
+            ],
+            "place_likers_top": [
+                "switzerland",
+                "france"
+            ],
+            "place_likers_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_top": [
+                "switzerland",
+                "france"
+            ],
+            "posts_from_file": [
+                "posts.txt"
+            ],
+            "remove_followers_from_file": [
+                "remove1.txt 5-10",
+                "remove2.txt 6"
+            ],
+            "delete_removed_followers": true,
+            "telegram_reports": false,
+            "time_delta_session": 841,
+            "current_likes_limit": 1,
+            "current_follow_limit": 1,
+            "current_unfollow_limit": 2,
+            "current_comments_limit": 5,
+            "current_pm_limit": 3,
+            "current_watch_limit": 1,
+            "current_success_limit": 2,
+            "current_total_limit": 1,
+            "current_scraped_limit": 1,
+            "current_crashes_limit": 5
+        },
+        "profile": {
+            "posts": 0,
+            "followers": 29,
+            "following": 99
+        }
+    },
+    {
+        "id": "b3b3df1b-6028-42bb-85f2-15646fd3c242",
+        "total_interactions": 0,
+        "successful_interactions": 0,
+        "total_followed": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "total_pm": 0,
+        "total_watched": 0,
+        "total_unfollowed": 0,
+        "total_scraped": {},
+        "start_time": "2023-07-03 15:53:50.124177",
+        "finish_time": "None",
+        "args": {
+            "config": "accounts/varshana2407/config.yml",
+            "unfollow": "1-2",
+            "unfollow_non_followers": "1-2",
+            "unfollow_any_non_followers": "1-2",
+            "unfollow_any_followers": "1-2",
+            "unfollow_any": "1-2",
+            "min_following": "100",
+            "sort_followers_newest_to_oldest": false,
+            "unfollow_delay": "15",
+            "app_id": "com.instagram.android",
+            "use_cloned_app": false,
+            "device": null,
+            "username": "varshana2407",
+            "likes_count": "1-2",
+            "likes_percentage": "100",
+            "total_likes_limit": "1-2",
+            "total_follows_limit": "1-2",
+            "total_unfollows_limit": "1-2",
+            "total_watches_limit": "1-2",
+            "total_successful_interactions_limit": "1-2",
+            "total_interactions_limit": "1-2",
+            "stories_count": "1-2",
+            "stories_percentage": "1-2",
+            "carousel_count": "2-3",
+            "carousel_percentage": "1-2",
+            "watch_video_time": "15-35",
+            "watch_photo_time": "3-4",
+            "interactions_count": "1-2",
+            "interact_percentage": "1-2",
+            "can_reinteract_after": null,
+            "repeat": "280-320",
+            "follow_percentage": "1-2",
+            "follow_limit": "50",
+            "skipped_list_limit": "1-2",
+            "fling_when_skipped": "0",
+            "speed_multiplier": "1",
+            "screen_sleep": true,
+            "debug": false,
+            "screen_record": false,
+            "close_apps": false,
+            "interact": null,
+            "hashtag_likers": null,
+            "delete_interacted_users": true,
+            "scrape_to_file": null,
+            "total_scraped_limit": "1-2",
+            "comment_percentage": "0",
+            "total_comments_limit": "3-5",
+            "pm_percentage": "0",
+            "total_pm_limit": "3-5",
+            "max_comments_pro_user": "1-2",
+            "end_if_likes_limit_reached": true,
+            "end_if_follows_limit_reached": false,
+            "end_if_watches_limit_reached": false,
+            "end_if_comments_limit_reached": false,
+            "end_if_pm_limit_reached": false,
+            "truncate_sources": "2-5",
+            "shuffle_jobs": true,
+            "working_hours": [
+                "10.15-16.40",
+                "18.15-22.46"
+            ],
+            "time_delta": "10-15",
+            "disable_filters": false,
+            "total_crashes_limit": "5",
+            "count_app_crashes": false,
+            "skipped_posts_limit": "5",
+            "uia_version": 2,
+            "total_sessions": "1",
+            "disable_block_detection": true,
+            "pre_script": null,
+            "post_script": null,
+            "move_folders_in_accounts": false,
+            "dont_type": false,
+            "analytics": false,
+            "blogger": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "interact_from_file": [
+                "usernames1.txt 10-15",
+                "usernames2.txt 3"
+            ],
+            "unfollow_from_file": [
+                "usernames1.txt 7-15",
+                "usernames2.txt 6"
+            ],
+            "blogger_followers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_following": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_likers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_limits": 0,
+            "feed": "2-5",
+            "hashtag_likers_top": [
+                "php",
+                "python"
+            ],
+            "hashtag_likers_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_top": [
+                "php",
+                "python"
+            ],
+            "place_likers_top": [
+                "switzerland",
+                "france"
+            ],
+            "place_likers_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_top": [
+                "switzerland",
+                "france"
+            ],
+            "posts_from_file": [
+                "posts.txt"
+            ],
+            "remove_followers_from_file": [
+                "remove1.txt 5-10",
+                "remove2.txt 6"
+            ],
+            "delete_removed_followers": true,
+            "telegram_reports": false,
+            "time_delta_session": -663,
+            "current_likes_limit": 2,
+            "current_follow_limit": 2,
+            "current_unfollow_limit": 1,
+            "current_comments_limit": 4,
+            "current_pm_limit": 4,
+            "current_watch_limit": 1,
+            "current_success_limit": 2,
+            "current_total_limit": 2,
+            "current_scraped_limit": 2,
+            "current_crashes_limit": 5
+        },
+        "profile": {
+            "posts": 0,
+            "followers": 29,
+            "following": 99
+        }
+    },
+    {
+        "id": "44a8737f-c7d0-4f7b-a2d2-0105ebec204c",
+        "total_interactions": 0,
+        "successful_interactions": 0,
+        "total_followed": 0,
+        "total_likes": 0,
+        "total_comments": 0,
+        "total_pm": 0,
+        "total_watched": 0,
+        "total_unfollowed": 0,
+        "total_scraped": {},
+        "start_time": "2023-07-03 15:56:55.573257",
+        "finish_time": "None",
+        "args": {
+            "config": "accounts/varshana2407/config.yml",
+            "unfollow": "1-2",
+            "unfollow_non_followers": "1-2",
+            "unfollow_any_non_followers": "1-2",
+            "unfollow_any_followers": "1-2",
+            "unfollow_any": "1-2",
+            "min_following": "100",
+            "sort_followers_newest_to_oldest": false,
+            "unfollow_delay": "15",
+            "app_id": "com.instagram.android",
+            "use_cloned_app": false,
+            "device": null,
+            "username": "varshana2407",
+            "likes_count": "1-2",
+            "likes_percentage": "100",
+            "total_likes_limit": "1-2",
+            "total_follows_limit": "1-2",
+            "total_unfollows_limit": "1-2",
+            "total_watches_limit": "1-2",
+            "total_successful_interactions_limit": "1-2",
+            "total_interactions_limit": "1-2",
+            "stories_count": "1-2",
+            "stories_percentage": "1-2",
+            "carousel_count": "2-3",
+            "carousel_percentage": "1-2",
+            "watch_video_time": "15-35",
+            "watch_photo_time": "3-4",
+            "interactions_count": "1-2",
+            "interact_percentage": "1-2",
+            "can_reinteract_after": null,
+            "repeat": "280-320",
+            "follow_percentage": "1-2",
+            "follow_limit": "50",
+            "skipped_list_limit": "1-2",
+            "fling_when_skipped": "0",
+            "speed_multiplier": "1",
+            "screen_sleep": true,
+            "debug": false,
+            "screen_record": false,
+            "close_apps": false,
+            "interact": null,
+            "hashtag_likers": null,
+            "delete_interacted_users": true,
+            "scrape_to_file": null,
+            "total_scraped_limit": "1-2",
+            "comment_percentage": "0",
+            "total_comments_limit": "3-5",
+            "pm_percentage": "0",
+            "total_pm_limit": "3-5",
+            "max_comments_pro_user": "1-2",
+            "end_if_likes_limit_reached": true,
+            "end_if_follows_limit_reached": false,
+            "end_if_watches_limit_reached": false,
+            "end_if_comments_limit_reached": false,
+            "end_if_pm_limit_reached": false,
+            "truncate_sources": "2-5",
+            "shuffle_jobs": true,
+            "working_hours": [
+                "10.15-16.40",
+                "18.15-22.46"
+            ],
+            "time_delta": "10-15",
+            "disable_filters": false,
+            "total_crashes_limit": "5",
+            "count_app_crashes": false,
+            "skipped_posts_limit": "5",
+            "uia_version": 2,
+            "total_sessions": "1",
+            "disable_block_detection": true,
+            "pre_script": null,
+            "post_script": null,
+            "move_folders_in_accounts": false,
+            "dont_type": false,
+            "analytics": false,
+            "blogger": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "interact_from_file": [
+                "usernames1.txt 10-15",
+                "usernames2.txt 3"
+            ],
+            "unfollow_from_file": [
+                "usernames1.txt 7-15",
+                "usernames2.txt 6"
+            ],
+            "blogger_followers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_following": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_likers": [
+                "mariamiminadze",
+                "ints.kirveli"
+            ],
+            "blogger_post_limits": 0,
+            "feed": "2-5",
+            "hashtag_likers_top": [
+                "php",
+                "python"
+            ],
+            "hashtag_likers_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_recent": [
+                "php",
+                "python"
+            ],
+            "hashtag_posts_top": [
+                "php",
+                "python"
+            ],
+            "place_likers_top": [
+                "switzerland",
+                "france"
+            ],
+            "place_likers_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_recent": [
+                "switzerland",
+                "france"
+            ],
+            "place_posts_top": [
+                "switzerland",
+                "france"
+            ],
+            "posts_from_file": [
+                "posts.txt"
+            ],
+            "remove_followers_from_file": [
+                "remove1.txt 5-10",
+                "remove2.txt 6"
+            ],
+            "delete_removed_followers": true,
+            "telegram_reports": false,
+            "time_delta_session": 733,
+            "current_likes_limit": 2,
+            "current_follow_limit": 2,
+            "current_unfollow_limit": 1,
+            "current_comments_limit": 3,
+            "current_pm_limit": 5,
+            "current_watch_limit": 1,
+            "current_success_limit": 1,
+            "current_total_limit": 1,
+            "current_scraped_limit": 2,
+            "current_crashes_limit": 5
+        },
+        "profile": {
+            "posts": 0,
+            "followers": 29,
+            "following": 99
+        }
     }
 ]

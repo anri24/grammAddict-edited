@@ -11,6 +11,7 @@ from time import sleep
 from typing import Optional
 
 import uiautomator2
+import audioSettings
 
 from GramAddict.core.utils import random_sleep
 
@@ -108,7 +109,8 @@ class DeviceFacade:
             avoid_lst = ["choose_cloned_app", "check_if_crash_popup_is_there"]
             caller = stack()[1].function
             if not self._ig_is_opened() and caller not in avoid_lst:
-                raise DeviceFacade.AppHasCrashed("App has crashed / has been closed!")
+                DeviceFacade.AppHasCrashed("App has crashed / has been closed!")
+                raise audioSettings.talk("App has crashed and has been closed!")
             return func(self, **kwargs)
 
         return wrapper
@@ -495,11 +497,14 @@ class DeviceFacade:
                 if not self.exists():
                     return True
                 logger.debug("UI element didn't open! Try again..")
+                audioSettings.talk("UI element didn't open! Try again..")
+
                 self.click(mode, sleep, coord)
                 maxretry -= 1
             if not self.exists():
                 return True
             logger.warning("Failed to open the UI element!")
+            audioSettings.talk("Failed to open the UI element!")
             return False
 
         def double_click(self, padding=0.3, obj_over=0):
