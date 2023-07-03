@@ -6200,5 +6200,19 @@
         "unfollowed": false,
         "scraped": false,
         "pm_sent": false
+    },
+    "lubricerrd": {
+        "last_interaction": "2023-07-03 18:08:17.487402",
+        "following_status": "none",
+        "session_id": "d7502c7b-4a70-4025-95ec-893e4c1092d0",
+        "job_name": "place-posts-recent",
+        "target": "switzerland",
+        "liked": 0,
+        "watched": 0,
+        "commented": 0,
+        "followed": false,
+        "unfollowed": false,
+        "scraped": false,
+        "pm_sent": false
     }
 }

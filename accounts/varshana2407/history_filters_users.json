@@ -6014,5 +6014,21 @@
         "fullname": "Emma",
         "potency_ratio": 0.2547945205479452,
         "skip_reason": "POTENCY_RATIO"
+    },
+    "lubricerrd": {
+        "datetime": "2023-07-03 18:08:16.354504",
+        "followers": 1952,
+        "followings": 29,
+        "mutual_friends": 0,
+        "follow_button_text": "FOLLOW",
+        "is_restricted": false,
+        "is_private": false,
+        "has_business_category": true,
+        "posts_count": 72,
+        "biography": "",
+        "link_in_bio": null,
+        "fullname": "LUBRICER RD\ud83d\udca6 | \ua730\u1d0f\u0280 \u1d1b\u0280\u1d1c\u1d07 \u1d18\u029f\u1d07\u1d00\ua731\u1d1c\u0280\u1d07",
+        "potency_ratio": 67.3103448275862,
+        "skip_reason": "LT_FOLLOWINGS"
     }
 }
