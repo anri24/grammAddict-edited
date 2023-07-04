@@ -8,8 +8,8 @@
 # General Configuration
 ##############################################################################
 
-username: varshana2407 # you have to put your IG name here!
-# device: 127.0.0.1:21513 # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
+username: myusername # you have to put your IG name here!
+# device: put_your_device_id_there # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
 app-id: com.instagram.android
 use-cloned-app: false
 screen-sleep: true
@@ -31,18 +31,18 @@ truncate-sources: 2-5
 ##############################################################################
 
 ## Interaction (active jobs)
-blogger-followers: [ mariamiminadze, ints.kirveli ]
-blogger-following: [ mariamiminadze, ints.kirveli]
-blogger-post-likers: [ mariamiminadze, ints.kirveli]
-blogger: [ mariamiminadze, ints.kirveli ]
-hashtag-likers-top: [ php, python ]
-hashtag-likers-recent: [ php, python ]
-hashtag-posts-top: [ php, python ]
-hashtag-posts-recent: [ php, python ]
-place-posts-top: [ switzerland, france ]
-place-posts-recent: [ switzerland, france ]
-place-likers-top: [ switzerland, france ]
-place-likers-recent: [ switzerland, france ]
+blogger-followers: [ username1, username2 ]
+blogger-following: [ username1, username2 ]
+blogger-post-likers: [ username1, username2 ]
+blogger: [ username1, username2 ]
+hashtag-likers-top: [ hashtag1, hashtag2 ]
+hashtag-likers-recent: [ hashtag1, hashtag2 ]
+hashtag-posts-top: [ hashtag1, hashtag2 ]
+hashtag-posts-recent: [ hashtag1, hashtag2 ]
+place-posts-top: [ place1, place2 ]
+place-posts-recent: [ place1, place2 ]
+place-likers-top: [ place1, place2 ]
+place-likers-recent: [ place1, place2 ]
 interact-from-file: [usernames1.txt 10-15, usernames2.txt 3]
 posts-from-file: posts.txt
 feed: 2-5 # is the number of likes you will give in feed

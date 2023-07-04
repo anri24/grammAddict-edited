@@ -109,8 +109,8 @@ class DeviceFacade:
             avoid_lst = ["choose_cloned_app", "check_if_crash_popup_is_there"]
             caller = stack()[1].function
             if not self._ig_is_opened() and caller not in avoid_lst:
-                DeviceFacade.AppHasCrashed("App has crashed / has been closed!")
-                raise audioSettings.talk("App has crashed and has been closed!")
+                audioSettings.talk("App has crashed and has been closed!")
+                raise DeviceFacade.AppHasCrashed("App has crashed / has been closed!")
             return func(self, **kwargs)
 
         return wrapper
