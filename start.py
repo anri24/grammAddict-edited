@@ -6,9 +6,7 @@ import audioSettings
 username = input('what is your accounts username ? ')
 config_dir = 'accounts/'+username
 config_ex = 'config-examples'
-dest = 'accounts/'+username
 config = os.path.exists(config_dir)
-
 
 
 if(config == False):
@@ -16,10 +14,10 @@ if(config == False):
     if (len(noAccountFile) > 0):
         answer = noAccountFile[0]
     if noAccountFile == '' or answer == "y":
-        shutil.copytree(config_ex, dest) 
-        firstConf = sp.Popen(["notepad.exe", dest +"/config.yml"])
+        shutil.copytree(config_ex, config_dir) 
+        firstConf = sp.Popen(["notepad.exe", config_dir +"/config.yml"])
         firstConf.wait()        
-        os.system('python run.py --config accounts/'+ username +'/config.yml')
+        os.system('python run.py --config '+ config_dir +'/config.yml')
     elif answer == "n":
         exit 
 else:
@@ -27,8 +25,8 @@ else:
     if (len(changeConfig) > 0):
         answer = changeConfig[0]
     if changeConfig == '' or answer == "y":
-        secondConf = sp.Popen(["notepad.exe", "accounts/"+username +"/config.yml"])
+        secondConf = sp.Popen(["notepad.exe", config_dir +"/config.yml"])
         secondConf.wait()
-        os.system('python run.py --config accounts/'+ username +'/config.yml')
+        os.system('python run.py --config '+ config_dir +'/config.yml')
     elif answer == "n":
-        os.system('python run.py --config accounts/'+ username +'/config.yml')
+        os.system('python run.py --config '+ config_dir +'/config.yml')
