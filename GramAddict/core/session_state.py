@@ -6,6 +6,7 @@ from json import JSONEncoder
 
 from GramAddict.core.utils import get_value
 import audioSettings
+import msgErrors
 
 logger = logging.getLogger(__name__)
 
@@ -238,10 +239,13 @@ class SessionState:
             if output:
                 logger.info(session_info[9])
                 audioSettings.talk(session_info[9])
+                msgErrors.send_slack_message(session_info[9])
+                
 
             else:
                 logger.debug(session_info[9])
                 audioSettings.talk(session_info[9])
+                msgErrors.send_slack_message(session_info[9])
 
             return total_crashes
 

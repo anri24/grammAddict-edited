@@ -64,6 +64,7 @@ from GramAddict.core.utils import (
 from GramAddict.core.views import AccountView, ProfileView, TabBarView, UniversalActions
 from GramAddict.core.views import load_config as load_views
 import audioSettings
+import msgErrors
 
 
 
@@ -161,6 +162,7 @@ def start_bot(**kwargs):
                     "Can't unlock your screen. There may be a passcode on it. If you would like your screen to be turned on and unlocked automatically, please remove the passcode."
                 )
                 audioSettings.talk("can't unlock your screen, please remove passcode.")
+                msgErrors.send_slack_message("can't unlock your screen, please remove passcode.")
                 stop_bot(device, sessions, session_state, was_sleeping=False)
 
         logger.info("Device screen ON and unlocked.")
@@ -286,6 +288,8 @@ def start_bot(**kwargs):
                     extra={"color": f"{Fore.CYAN}"},
                 )
                 audioSettings.talk("one of these limits has been reached and bot stops working for few hours")
+                msgErrors.send_slack_message("one of these limits has been reached and bot stops working for few hours")
+                
                 close_instagram(device)
                 print('bot is sleeping')
                 print('it will start again after 8 hour')
@@ -306,6 +310,7 @@ def start_bot(**kwargs):
                         "Scraping in unfollow-jobs doesn't make any sense. SKIP. "
                     )
                     audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
+                    msgErrors.send_slack_message("one of these limits has been reached, and bot stops working for few hours")
                     close_instagram(device)
                     print('bot is sleeping')
                     print('it will start again after 1 hour')
@@ -325,6 +330,7 @@ def start_bot(**kwargs):
                     print_limits = None
 
                     audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
+                    msgErrors.send_slack_message("one of these limits has been reached, and bot stops working for few hours")
                     close_instagram(device)
                     print('bot is sleeping')
                     print('it will start again after 1 hour')
@@ -354,6 +360,7 @@ def start_bot(**kwargs):
                     if unfollow_jobs:
                         
                         audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
+                        msgErrors.send_slack_message("one of these limits has been reached, and bot stops working for few hours")
 
                         close_instagram(device)
                         print('bot is sleeping')
@@ -373,6 +380,7 @@ def start_bot(**kwargs):
                         )
                         
                         audioSettings.talk("one of these limits has been reached, and bot stops working for few hours")
+                        msgErrors.send_slack_message("one of these limits has been reached, and bot stops working for few hours")
                         close_instagram(device)
                         print('bot is sleeping')
                         print('it will start again after 1 hour')

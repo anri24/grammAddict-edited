@@ -12,6 +12,7 @@ from typing import Optional
 
 import uiautomator2
 import audioSettings
+import msgErrors
 
 from GramAddict.core.utils import random_sleep
 
@@ -110,6 +111,7 @@ class DeviceFacade:
             caller = stack()[1].function
             if not self._ig_is_opened() and caller not in avoid_lst:
                 audioSettings.talk("App has crashed and has been closed!")
+                msgErrors.send_slack_message("App has crashed and has been closed!")
                 raise DeviceFacade.AppHasCrashed("App has crashed / has been closed!")
             return func(self, **kwargs)
 
@@ -498,6 +500,7 @@ class DeviceFacade:
                     return True
                 logger.debug("UI element didn't open! Try again..")
                 audioSettings.talk("UI element didn't open! Try again..")
+                msgErrors.send_slack_message("UI element didn't open! Try again..")
 
                 self.click(mode, sleep, coord)
                 maxretry -= 1
@@ -505,6 +508,7 @@ class DeviceFacade:
                 return True
             logger.warning("Failed to open the UI element!")
             audioSettings.talk("Failed to open the UI element!")
+            msgErrors.send_slack_message("Failed to open the UI element!")
             return False
 
         def double_click(self, padding=0.3, obj_over=0):

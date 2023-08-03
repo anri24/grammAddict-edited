@@ -28,6 +28,7 @@ from GramAddict.core.utils import (
     save_crash,
 )
 import audioSettings
+import msgErrors
 
 
 
@@ -317,6 +318,7 @@ class SearchView:
             TabBarView(self.device).navigateToSearch()
         logger.error("Can't find the search bar!")
         audioSettings.talk("error, Can't find the search bar!")
+        msgErrors.send_slack_message("error, Can't find the search bar!")
         return None
 
     def _getUsernameRow(self, username):
@@ -1049,6 +1051,7 @@ class AccountView:
         else:
             logger.error("Not able to set your app in English! Do it by yourself!")
             audioSettings.talk("error, application need english language")
+            msgErrors.send_slack_message("error, application need english language")
             exit(0)
 
     def changeToUsername(self, username: str):
@@ -1075,6 +1078,7 @@ class AccountView:
                         "Cannot find action bar (where you select your account)!"
                     )
                     audioSettings.talk("error, Cannot find action bar (where you select your account)!")
+                    msgErrors.send_slack_message("error, Cannot find action bar (where you select your account)!")
         return False
 
     def _find_username(self, username, has_scrolled=False):
@@ -1135,6 +1139,7 @@ class SettingsView:
         else:
             logger.error("Not able to set your app in English! Do it by yourself!")
             audioSettings.talk("error, Not able to set your app in English! Do it by yourself!")
+            msgErrors.send_slack_message("error, Not able to set your app in English! Do it by yourself!")
             exit(2)
 
 
@@ -1154,6 +1159,7 @@ class OptionsView:
         else:
             logger.error("Not able to set your app in English! Do it by yourself!")
             audioSettings.talk("error, Not able to set your app in English! Do it by yourself!")
+            msgErrors.send_slack_message("error, Not able to set your app in English! Do it by yourself!")
             exit(0)
 
 
@@ -1368,6 +1374,7 @@ class OpenedPostView:
             logger.debug("Can't find likers list, try again..")
         logger.error("Can't load likers list..")
         audioSettings.talk("error, Can't load likers list..")
+        msgErrors.send_slack_message("error, Can't load likers list..")
         return None
 
     def _getUserContainer(self):

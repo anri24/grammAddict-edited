@@ -30,6 +30,7 @@ from GramAddict.core.report import print_full_report
 from GramAddict.core.resources import ResourceID as resources
 from GramAddict.core.storage import ACCOUNTS
 import audioSettings
+import msgErrors
 
 http = urllib3.PoolManager()
 logger = logging.getLogger(__name__)
@@ -75,6 +76,8 @@ def check_if_updated(crash=False):
     elif latest_version is None:
         logger.error("Unable to get latest version from pypi!")
         audioSettings.talk("Unable to get latest version from pypi!")
+        msgErrors.send_slack_message("Unable to get latest version from pypi!")
+        
 
     elif not crash:
         logger.info("Bot is updated.", extra={"color": f"{Style.BRIGHT}"})
@@ -130,6 +133,7 @@ def move_usernames_to_accounts():
                 f"Folder {dir.strip()} already exists! Won't overwrite it, please check which is the correct one and delete the other! Exception: {e}"
             )
             audioSettings.talk(f"Folder {dir.strip()} already exists! Won't overwrite it, please check which is the correct one and delete the other! Exception: {e}")
+            msgErrors.send_slack_message(f"Folder {dir.strip()} already exists! Won't overwrite it, please check which is the correct one and delete the other! Exception: {e}")
 
             
             sleep(3)
@@ -175,6 +179,7 @@ def check_adb_connection():
     else:
         logger.error(f"Connected devices via adb: {devices_count}. {message}")
         audioSettings.talk(f"error of device connection, {message},  {devices_count} device are connected")
+        msgErrors.send_slack_message(f"error of device connection, {message},  {devices_count} device are connected")
 
     return is_ok
 
@@ -232,6 +237,7 @@ def check_screen_timeout():
     except ValueError:
         logger.info("Unable to get screen timeout!")
         audioSettings.talk("Unable to get screen timeout!")
+        msgErrors.send_slack_message("Unable to get screen timeout!")
         logger.debug(resp.stdout)
 
 
@@ -720,6 +726,7 @@ def wait_for_next_session(time_left, session_state, sessions, device):
         extra={"color": f"{Fore.GREEN}"},
     )
     audioSettings.talk("The bot stopped for few hours")
+    msgErrors.send_slack_message("The bot stopped for few hours")
     try:
         sleep(time_left.total_seconds())
     except KeyboardInterrupt:
