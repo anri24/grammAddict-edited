@@ -105,7 +105,7 @@ min-following: 100
 # Total Limits Per Session
 ##############################################################################
 
-total-likes-limit: 120-150
+total-likes-limit: 70-100
 total-follows-limit: 40-50
 total-unfollows-limit: 40-50
 total-watches-limit: 120-150

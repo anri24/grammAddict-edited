@@ -288,8 +288,8 @@ def start_bot(**kwargs):
                 audioSettings.talk("one of these limits has been reached and bot stops working for few hours")
                 close_instagram(device)
                 print('bot is sleeping')
-                print('it will start again after 2 hour')
-                hour = 60*60*2
+                print('it will start again after 8 hour')
+                hour = 60*60*8
                 time = datetime.now() + timedelta(seconds=hour)
                 print(f"it will start at {time.strftime('%H:%M:%S')}")
                 sleep(hour)

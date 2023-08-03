@@ -9,7 +9,7 @@
 ##############################################################################
 
 username: varsho2407 # you have to put your IG name here!
-device: 127.0.0.1:21513 # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
+#device: 127.0.0.1:21503 # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
 app-id: com.instagram.android
 use-cloned-app: false
 screen-sleep: true
@@ -31,18 +31,18 @@ truncate-sources: 2-5
 ##############################################################################
 
 ## Interaction (active jobs)
-blogger-followers: [ mariamiminadze, ints.kirveli ,edana.ch]
-blogger-following: [ mariamiminadze, ints.kirveli ,edana.ch]
-blogger-post-likers: [ mariamiminadze, ints.kirveli ,edana.ch]
+blogger-followers: [ mariamiminadze, ints.kirveli ]
+blogger-following: [ mariamiminadze, ints.kirveli]
+blogger-post-likers: [ mariamiminadze, ints.kirveli]
 blogger: [ mariamiminadze, ints.kirveli ]
-hashtag-likers-top: [ edana, programming ]
-hashtag-likers-recent: [ edana, programming ]
-hashtag-posts-top: [ edana, programming ]
-hashtag-posts-recent: [ edana, programming ]
+hashtag-likers-top: [ php, python ]
+hashtag-likers-recent: [ php, python ]
+hashtag-posts-top: [ php, python ]
+hashtag-posts-recent: [ php, python ]
 place-posts-top: [ switzerland, france ]
-place-posts-recent: [ place1, france ]
-place-likers-top: [ place1, france ]
-place-likers-recent: [ place1, france ]
+place-posts-recent: [ switzerland, france ]
+place-likers-top: [ switzerland, france ]
+place-likers-recent: [ switzerland, france ]
 interact-from-file: [usernames1.txt 10-15, usernames2.txt 3]
 posts-from-file: posts.txt
 feed: 2-5 # is the number of likes you will give in feed
@@ -83,11 +83,11 @@ telegram-reports: false # for using telegram-reports you have also to configure 
 # Source Limits
 ##############################################################################
 
-interactions-count: 30-40
+interactions-count: 20-30
 likes-count: 1-2
 likes-percentage: 100
 stories-count: 1-2
-stories-percentage: 30-40
+stories-percentage: 20-30
 carousel-count: 2-3
 carousel-percentage: 60-70
 max-comments-pro-user: 1-2
@@ -105,7 +105,7 @@ min-following: 100
 # Total Limits Per Session
 ##############################################################################
 
-total-likes-limit: 120-150
+total-likes-limit: 50-70
 total-follows-limit: 40-50
 total-unfollows-limit: 40-50
 total-watches-limit: 120-150
@@ -119,7 +119,7 @@ total-scraped-limit: 100-150
 # Ending Session Conditions
 ##############################################################################
 
-end-if-likes-limit-reached: true
+end-if-likes-limit-reached: false
 end-if-follows-limit-reached: false
 end-if-watches-limit-reached: false
 end-if-comments-limit-reached: false
@@ -133,3 +133,7 @@ working-hours: [10.15-16.40, 18.15-22.46]
 time-delta: 10-15
 repeat: 280-320
 total-sessions: 1 # -1 or commented for infinite sessions
+
+
+# if code crashes you will hear audio about it.
+# crash_audio_warning: true
