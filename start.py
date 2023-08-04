@@ -1,8 +1,10 @@
 import os 
 import shutil
 import subprocess as sp
-import audioSettings
+import time
 
+openmemu = os.startfile(r"c:\Users\anriv\Desktop\MEmu-1.lnk")
+time.sleep(10)
 username = input('what is your accounts username ? ')
 config_dir = 'accounts/'+username
 config_ex = 'config-examples'

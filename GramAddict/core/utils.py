@@ -285,6 +285,7 @@ def open_instagram(device):
 
     logger.info("Ready for botting!🤫", extra={"color": f"{Style.BRIGHT}{Fore.GREEN}"})
     audioSettings.talk("bot is ready!")
+    msgErrors.send_slack_message("bot is ready to work")
 
     random_sleep()
     if configs.args.close_apps:
