@@ -274,6 +274,7 @@ def start_bot(**kwargs):
                     extra={"color": f"{Fore.CYAN}"},
                 )
                 audioSettings.talk("Outside of working hours. Ending session.")
+                msgErrors.send_slack_message("Outside of working hours. Ending session.")
                 break
             (
                 active_limits_reached,

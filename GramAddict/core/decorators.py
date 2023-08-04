@@ -19,6 +19,7 @@ from GramAddict.core.utils import (
     stop_bot,
 )
 from GramAddict.core.views import TabBarView
+import msgErrors
 import audioSettings
 
 logger = logging.getLogger(__name__)
@@ -63,6 +64,7 @@ def run_safely(device, device_id, sessions, session_state, screen_record, config
             except DeviceFacade.AppHasCrashed:
                 logger.warning("App has crashed / has been closed!")
                 audioSettings.talk('app has crashed, it will restart working')
+                msgErrors.send_slack_message("app has crashed, it will restart working")
                 restart(
                     device,
                     sessions,
@@ -129,10 +131,12 @@ def restart(
                 "Reached crashes limit. Bot has crashed too much! Please check what's going on."
             )
             audioSettings.talk("bot Reached crashes limit. Bot has crashed too much! Please check what's going on.")
+            msgErrors.send_slack_message("bot Reached crashes limit. Bot has crashed too much! Please check what's going on.")
             # stop_bot(device, sessions, session_state)
             
         logger.info("Something unexpected happened. Let's try again.")
         audioSettings.talk(f"Something unexpected happened. Let's try again, bot is crashed {session_state.totalCrashes} times")
+        msgErrors.send_slack_message(f"Something unexpected happened. Let's try again, bot is crashed {session_state.totalCrashes} times")
     close_instagram(device)
     check_if_crash_popup_is_there(device)
     random_sleep()
