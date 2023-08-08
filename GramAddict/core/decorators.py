@@ -94,11 +94,25 @@ def run_safely(device, device_id, sessions, session_state, screen_record, config
                     logger.critical(
                         f"'{exception_line}' -> This kind of exception will stop the bot (no restart)."
                     )
+                    audioSettings('critical error')
+                    msgErrors('critical error')
+                    restart(
+                        device,
+                        sessions,
+                        session_state,
+                        configs,
+                    )
                 logger.info(
                     f"List of running apps: {', '.join(device.deviceV2.app_list_running())}"
                 )
                 save_crash(device)
-                close_instagram(device)
+                restart(
+                    device,
+                    sessions,
+                    session_state,
+                    configs,
+                )
+                
                 print_full_report(sessions, configs.args.scrape_to_file)
                 sessions.persist(directory=session_state.my_username)
                 raise e from e

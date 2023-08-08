@@ -7,11 +7,11 @@ import requests
 import sys
 import getopt
 
+slack_key = 'https://hooks.slack.com/services/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'
+
 def send_slack_message(message):
     payload = '{"text":"%s"}' % message
-    response = requests.post('https://hooks.slack.com/services/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',
-                            data=payload)
-    # print(response.text)
+    response = requests.post(slack_key,data=payload)
 
 def main(argv):
     message = ''

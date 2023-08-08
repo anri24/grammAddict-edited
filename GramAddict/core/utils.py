@@ -285,7 +285,7 @@ def open_instagram(device):
 
     logger.info("Ready for botting!🤫", extra={"color": f"{Style.BRIGHT}{Fore.GREEN}"})
     audioSettings.talk("bot is ready!")
-    msgErrors.send_slack_message("bot is ready to work")
+    msgErrors.send_slack_message("Ready for botting!🤫")
 
     random_sleep()
     if configs.args.close_apps:
@@ -728,6 +728,7 @@ def wait_for_next_session(time_left, session_state, sessions, device):
     )
     audioSettings.talk("The bot stopped for few hours")
     msgErrors.send_slack_message("The bot stopped for few hours")
+    msgErrors.send_slack_message(f'Next session will start at: {(datetime.now()+ time_left).strftime("%H:%M:%S (%Y/%m/%d)")}')
     try:
         sleep(time_left.total_seconds())
     except KeyboardInterrupt:
