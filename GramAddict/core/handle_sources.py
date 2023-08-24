@@ -34,6 +34,8 @@ from GramAddict.core.views import (
     case_insensitive_re,
 )
 
+from . import decorators
+
 logger = logging.getLogger(__name__)
 
 
@@ -320,7 +322,16 @@ def handle_likers(
                     f"Scrolled through {nr_same_posts_max} posts with same description and author. Finish.",
                     extra={"color": f"{Fore.CYAN}"},
                 )
-                continue
+                # aqqqqq
+                decorators.restart(
+                    device,
+                    # sessions,
+                    session_state,
+                    # configs,
+                    normal_crash=False,
+                    print_traceback=False,
+                )
+                # break
         else:
             nr_same_post = 0
 

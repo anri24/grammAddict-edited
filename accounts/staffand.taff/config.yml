@@ -8,8 +8,8 @@
 # General Configuration
 ##############################################################################
 
-username: varshana2407 # you have to put your IG name here!
-# device: 127.0.0.1:21513 # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
+username: staffand.taff # you have to put your IG name here!
+# device: put_your_device_id_there # 'adb devices' in the console to know it.  It's needed only if you have more than 1 device connected
 app-id: com.instagram.android
 use-cloned-app: false
 screen-sleep: true
@@ -31,19 +31,19 @@ truncate-sources: 2-5
 ##############################################################################
 
 ## Interaction (active jobs)
-blogger-followers: [ mariamiminadze, ints.kirveli ]
-blogger-following: [ mariamiminadze, ints.kirveli]
-blogger-post-likers: [ mariamiminadze, ints.kirveli]
-blogger: [ mariamiminadze, ints.kirveli ]
-hashtag-likers-top: [ php, python ]
-hashtag-likers-recent: [ php, python ]
-hashtag-posts-top: [ php, python ]
-hashtag-posts-recent: [ php, python ]
-place-posts-top: [ switzerland, france ]
-place-posts-recent: [ switzerland, france ]
-place-likers-top: [ switzerland, france ]
-place-likers-recent: [ switzerland, france ]
-# interact-from-file: [usernames1.txt 10-15, usernames2.txt 3]
+blogger-followers: [ ehl.lausanne, lesrochesswitzerland, lesrochesalumni ]
+blogger-following: [ lesrochesswitzerland, hoscojobs, lesrochesalumni ]
+blogger-post-likers: [ ehl.lausanne, lesrochesswitzerland, lesrochesalumni ]
+blogger: [ lesrochesswitzerland, hoscojobs, lesrochesalumni ]
+hashtag-likers-top: [ hospitalityindustry, hospitalityjobs, chefjobs, hospitality, restaurantjobs ]
+hashtag-likers-recent: [ emploicuisine, emploirestauration, hospitalityindustry, hospitalityjobs, chefjobs, hospitality, restaurantjobs ]
+hashtag-posts-top: [ emploicuisine, emploirestauration ]
+hashtag-posts-recent: [ hospitalityindustry, hospitalityjobs, chefjobs, hospitality, restaurantjobs ]
+place-posts-top: [ Suisse, France, Genève, Paris ]
+place-posts-recent: [ Suisse, France, Genève, Paris ]
+place-likers-top: [ Suisse, France, Genève, Paris ]
+place-likers-recent: [ Suisse, France, Genève, Paris ]
+#interact-from-file: [usernames1.txt 10-15, usernames2.txt 3]
 posts-from-file: posts.txt
 feed: 2-5 # is the number of likes you will give in feed
 
@@ -83,18 +83,18 @@ telegram-reports: false # for using telegram-reports you have also to configure 
 # Source Limits
 ##############################################################################
 
-interactions-count: 30-40
+interactions-count: 15-20
 likes-count: 1-2
 likes-percentage: 100
 stories-count: 1-2
-stories-percentage: 30-40
+stories-percentage: 15-20
 carousel-count: 2-3
-carousel-percentage: 60-70
+carousel-percentage: 15-20
 max-comments-pro-user: 1-2
-# comment-percentage: 30-40
-# pm-percentage: 30-40
-interact-percentage: 30-40
-follow-percentage: 30-40
+# comment-percentage: 15-20
+# pm-percentage: 15-20
+interact-percentage: 15-20
+follow-percentage: 15-20
 follow-limit: 50
 skipped-list-limit: 10-15
 skipped-posts-limit: 5
@@ -105,15 +105,15 @@ min-following: 100
 # Total Limits Per Session
 ##############################################################################
 
-total-likes-limit: 70-100
-total-follows-limit: 40-50
-total-unfollows-limit: 40-50
-total-watches-limit: 120-150
-total-successful-interactions-limit: 120-150
-total-interactions-limit: 280-300
-total-comments-limit: 3-5
-total-pm-limit: 3-5
-total-scraped-limit: 100-150
+total-likes-limit: 15-20
+total-follows-limit: 5-6
+total-unfollows-limit: 5-10
+total-watches-limit: 15-20
+total-successful-interactions-limit: 15-20
+total-interactions-limit: 20-30
+#total-comments-limit: 1-2
+#total-pm-limit: 0-1
+#total-scraped-limit: 0-0
 
 ##############################################################################
 # Ending Session Conditions
@@ -136,4 +136,5 @@ total-sessions: 1 # -1 or commented for infinite sessions
 
 
 # if code crashes you will hear audio about it.
-# crash_audio_warning: true
+#crash_audio_warning: true
+
