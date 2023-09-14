@@ -1966,5 +1966,53 @@
         "fullname": "Ilonka Gallo \ud83c\udde8\ud83c\uddf4",
         "potency_ratio": 1.128755364806867,
         "skip_reason": "GT_FOLLOWERS"
+    },
+    "emredoguoglu": {
+        "datetime": "2023-09-14 11:23:35.247217",
+        "followers": 1048,
+        "followings": 1115,
+        "mutual_friends": 0,
+        "follow_button_text": "FOLLOW",
+        "is_restricted": false,
+        "is_private": true,
+        "has_business_category": false,
+        "posts_count": 19,
+        "biography": "",
+        "link_in_bio": null,
+        "fullname": "Emre",
+        "potency_ratio": 0.9399103139013453,
+        "skip_reason": "GT_FOLLOWERS"
+    },
+    "tony.cooper27": {
+        "datetime": "2023-09-14 11:23:47.326929",
+        "followers": 904,
+        "followings": 960,
+        "mutual_friends": 0,
+        "follow_button_text": "FOLLOW",
+        "is_restricted": false,
+        "is_private": true,
+        "has_business_category": false,
+        "posts_count": 15,
+        "biography": "",
+        "link_in_bio": null,
+        "fullname": "Tony Cooper",
+        "potency_ratio": 0.9416666666666667,
+        "skip_reason": "BIOGRAPHY_IS_EMPTY"
+    },
+    "khyrahartono": {
+        "datetime": "2023-09-14 11:23:57.663569",
+        "followers": 2023,
+        "followings": 755,
+        "mutual_friends": 0,
+        "follow_button_text": "FOLLOW",
+        "is_restricted": false,
+        "is_private": true,
+        "has_business_category": false,
+        "posts_count": 18,
+        "biography": "@insivebrand",
+        "link_in_bio": null,
+        "fullname": "Khyra Hartono",
+        "potency_ratio": 2.6794701986754967,
+        "skip_reason": "GT_FOLLOWERS"
     }
 }

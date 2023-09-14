@@ -323,12 +323,9 @@ def handle_likers(
                     f"Scrolled through {nr_same_posts_max} posts with same description and author. Finish.",
                     extra={"color": f"{Fore.CYAN}"},
                 )
-                # aqqqqq
                 # continue
                 msgErrors.send_slack_message('bot is repeating posts and because that it crash!')
                 break
-
-            
         else:
             nr_same_post = 0
 

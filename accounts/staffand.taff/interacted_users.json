@@ -1720,5 +1720,47 @@
         "unfollowed": false,
         "scraped": false,
         "pm_sent": false
+    },
+    "emredoguoglu": {
+        "last_interaction": "2023-09-14 11:23:36.278083",
+        "following_status": "none",
+        "session_id": "140edba2-368f-4e7d-acf9-ebe22f87977a",
+        "job_name": "blogger-following",
+        "target": "lesrochesswitzerland",
+        "liked": 0,
+        "watched": 0,
+        "commented": 0,
+        "followed": false,
+        "unfollowed": false,
+        "scraped": false,
+        "pm_sent": false
+    },
+    "tony.cooper27": {
+        "last_interaction": "2023-09-14 11:23:48.201908",
+        "following_status": "none",
+        "session_id": "140edba2-368f-4e7d-acf9-ebe22f87977a",
+        "job_name": "blogger-following",
+        "target": "lesrochesswitzerland",
+        "liked": 0,
+        "watched": 0,
+        "commented": 0,
+        "followed": false,
+        "unfollowed": false,
+        "scraped": false,
+        "pm_sent": false
+    },
+    "khyrahartono": {
+        "last_interaction": "2023-09-14 11:23:58.716320",
+        "following_status": "none",
+        "session_id": "140edba2-368f-4e7d-acf9-ebe22f87977a",
+        "job_name": "blogger-following",
+        "target": "lesrochesswitzerland",
+        "liked": 0,
+        "watched": 0,
+        "commented": 0,
+        "followed": false,
+        "unfollowed": false,
+        "scraped": false,
+        "pm_sent": false
     }
 }
