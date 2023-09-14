@@ -324,9 +324,9 @@ def handle_likers(
                     extra={"color": f"{Fore.CYAN}"},
                 )
                 # aqqqqq
-            # continue
-            msgErrors.send_slack_message('bot is repeating posts and because that it crash!')
-            break
+                # continue
+                msgErrors.send_slack_message('bot is repeating posts and because that it crash!')
+                break
 
             
         else:
