@@ -35,6 +35,7 @@ from GramAddict.core.views import (
 )
 
 from . import decorators
+import msgErrors
 
 logger = logging.getLogger(__name__)
 
@@ -323,15 +324,11 @@ def handle_likers(
                     extra={"color": f"{Fore.CYAN}"},
                 )
                 # aqqqqq
-                decorators.restart(
-                    device,
-                    # sessions,
-                    session_state,
-                    # configs,
-                    normal_crash=False,
-                    print_traceback=False,
-                )
-                # break
+            # continue
+            msgErrors.send_slack_message('bot is repeating posts and because that it crash!')
+            break
+
+            
         else:
             nr_same_post = 0
 
