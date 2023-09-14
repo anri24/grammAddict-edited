@@ -21,3 +21,4 @@ Pipfile.lock
 *.log*
 *.ini
 *.db
+/accounts/*
