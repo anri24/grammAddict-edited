@@ -13,23 +13,27 @@ config = os.path.exists(config_dir)
 def askForChangeFile():
     print('------------------------')
     print("do you want to")
-    print('1 -> change config file')
-    print('2 -> change filter file')
-    print('3 -> run')
+    print('1 -> check device address')
+    print('2 -> change config file')
+    print('3 -> change filter file')
+    print('4 -> run')
     return input('-> ') 
 
 def openFiles():
     changeConfig = askForChangeFile()
-    while(changeConfig != 3):
+    while(changeConfig != 4):
         if changeConfig == '1':
+            os.system('adb devices')
+            changeConfig = askForChangeFile()
+        elif changeConfig == '2':
             secondConf = sp.Popen(["notepad.exe", config_dir +"/config.yml"])
             secondConf.wait()
             changeConfig = askForChangeFile()
-        elif changeConfig == '2':
+        elif changeConfig == '3':
             secondConf = sp.Popen(["notepad.exe", config_dir +"/filters.yml"])
             secondConf.wait()
             changeConfig = askForChangeFile()
-        elif changeConfig == '3':
+        elif changeConfig == '4':
             os.system('python run.py --config '+ config_dir +'/config.yml')
     
     
