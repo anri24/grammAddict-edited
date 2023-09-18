@@ -3,9 +3,31 @@ import shutil
 import subprocess as sp
 import time
 
-# openmemu = os.startfile(r"c:\Users\anriv\Desktop\MEmu-1.lnk")
-# time.sleep(10)
-username = input('what is your accounts username ? ')
+
+def addUsername(newUsername):
+    with open('usernames.txt','a') as usernames:
+        usernames.write(newUsername + "\n")
+
+def getUsername(username):
+    content = open('usernames.txt').readlines()
+    try:
+        name = int(username)
+        return content[int(name) -1]
+    except ValueError:
+        return username
+
+
+def seeUsernames():
+    with open('usernames.txt') as file:
+        count = 0
+        for line in file:
+                count += 1
+                print("{} -> {}".format(count, line.strip()))
+        username = input('what is your accounts username ? ')
+        return getUsername(username).strip()
+
+        
+username = seeUsernames()
 config_dir = 'accounts/'+username
 config_ex = 'config-examples'
 config = os.path.exists(config_dir)
@@ -43,12 +65,9 @@ if(config == False):
         answer = noAccountFile[0]
     if noAccountFile == '' or answer == "y":
         shutil.copytree(config_ex, config_dir) 
+        addUsername(username)
         openFiles()
     elif answer == "n":
         exit 
 else:
     openFiles()
-
-
-
-
