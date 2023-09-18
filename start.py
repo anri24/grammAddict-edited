@@ -10,6 +10,14 @@ config_dir = 'accounts/'+username
 config_ex = 'config-examples'
 config = os.path.exists(config_dir)
 
+def askForChangeFile():
+    print('------------------------')
+    print("do you want to")
+    print('1 -> change config file')
+    print('2 -> change filter file')
+    print('3 -> run')
+    return input('-> ') 
+    
 
 if(config == False):
     noAccountFile = input("There is no account's config file, do you want to create new ? (yes/no) ") 
@@ -23,12 +31,19 @@ if(config == False):
     elif answer == "n":
         exit 
 else:
-    changeConfig = input("do you want to change config file ? (yes/no) ") 
-    if (len(changeConfig) > 0):
-        answer = changeConfig[0]
-    if changeConfig == '' or answer == "y":
-        secondConf = sp.Popen(["notepad.exe", config_dir +"/config.yml"])
-        secondConf.wait()
-        os.system('python run.py --config '+ config_dir +'/config.yml')
-    elif answer == "n":
-        os.system('python run.py --config '+ config_dir +'/config.yml')
+    changeConfig = askForChangeFile()
+    while(changeConfig != 3):
+        if changeConfig == '1':
+            secondConf = sp.Popen(["notepad.exe", config_dir +"/config.yml"])
+            secondConf.wait()
+            changeConfig = askForChangeFile()
+        elif changeConfig == '2':
+            secondConf = sp.Popen(["notepad.exe", config_dir +"/filters.yml"])
+            secondConf.wait()
+            changeConfig = askForChangeFile()
+        elif changeConfig == '3':
+            os.system('python run.py --config '+ config_dir +'/config.yml')
+
+
+
+
