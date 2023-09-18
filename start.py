@@ -17,20 +17,8 @@ def askForChangeFile():
     print('2 -> change filter file')
     print('3 -> run')
     return input('-> ') 
-    
 
-if(config == False):
-    noAccountFile = input("There is no account's config file, do you want to create new ? (yes/no) ") 
-    if (len(noAccountFile) > 0):
-        answer = noAccountFile[0]
-    if noAccountFile == '' or answer == "y":
-        shutil.copytree(config_ex, config_dir) 
-        firstConf = sp.Popen(["notepad.exe", config_dir +"/config.yml"])
-        firstConf.wait()        
-        os.system('python run.py --config '+ config_dir +'/config.yml')
-    elif answer == "n":
-        exit 
-else:
+def openFiles():
     changeConfig = askForChangeFile()
     while(changeConfig != 3):
         if changeConfig == '1':
@@ -43,6 +31,19 @@ else:
             changeConfig = askForChangeFile()
         elif changeConfig == '3':
             os.system('python run.py --config '+ config_dir +'/config.yml')
+    
+    
+if(config == False):
+    noAccountFile = input("There is no account's config file, do you want to create new ? (yes/no) ") 
+    if (len(noAccountFile) > 0):
+        answer = noAccountFile[0]
+    if noAccountFile == '' or answer == "y":
+        shutil.copytree(config_ex, config_dir) 
+        openFiles()
+    elif answer == "n":
+        exit 
+else:
+    openFiles()
 
 
 
