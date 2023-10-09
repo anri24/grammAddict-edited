@@ -19,6 +19,7 @@ from urllib.parse import urlparse
 
 import emoji
 import requests
+import uiautomator2.exceptions
 import urllib3
 from colorama import Fore, Style
 from packaging.version import parse as parse_version
@@ -29,8 +30,6 @@ from GramAddict.core.log import get_log_file_config
 from GramAddict.core.report import print_full_report
 from GramAddict.core.resources import ResourceID as resources
 from GramAddict.core.storage import ACCOUNTS
-import audioSettings
-import msgErrors
 
 http = urllib3.PoolManager()
 logger = logging.getLogger(__name__)
@@ -75,10 +74,6 @@ def check_if_updated(crash=False):
         sleep(5)
     elif latest_version is None:
         logger.error("Unable to get latest version from pypi!")
-        audioSettings.talk("Unable to get latest version from pypi!")
-        msgErrors.send_slack_message("Unable to get latest version from pypi!")
-        
-
     elif not crash:
         logger.info("Bot is updated.", extra={"color": f"{Style.BRIGHT}"})
 
@@ -132,10 +127,6 @@ def move_usernames_to_accounts():
             logger.error(
                 f"Folder {dir.strip()} already exists! Won't overwrite it, please check which is the correct one and delete the other! Exception: {e}"
             )
-            audioSettings.talk(f"Folder {dir.strip()} already exists! Won't overwrite it, please check which is the correct one and delete the other! Exception: {e}")
-            msgErrors.send_slack_message(f"Folder {dir.strip()} already exists! Won't overwrite it, please check which is the correct one and delete the other! Exception: {e}")
-
-            
             sleep(3)
     if len(ls) > 0:
         logger.warning(
@@ -178,8 +169,6 @@ def check_adb_connection():
         logger.debug(f"Connected devices via adb: {devices_count}. {message}")
     else:
         logger.error(f"Connected devices via adb: {devices_count}. {message}")
-        audioSettings.talk(f"error of device connection, {message},  {devices_count} device are connected")
-        msgErrors.send_slack_message(f"error of device connection, {message},  {devices_count} device are connected")
 
     return is_ok
 
@@ -233,11 +222,8 @@ def check_screen_timeout():
             subprocess.run(cmd, stdout=PIPE, stderr=PIPE, shell=True, encoding="utf8")
         else:
             logger.info("Screen timeout is fine!")
-
     except ValueError:
         logger.info("Unable to get screen timeout!")
-        audioSettings.talk("Unable to get screen timeout!")
-        msgErrors.send_slack_message("Unable to get screen timeout!")
         logger.debug(resp.stdout)
 
 
@@ -245,27 +231,19 @@ def open_instagram(device):
     nl = "\n"
     FastInputIME = "com.github.uiautomator/.FastInputIME"
     logger.info("Open Instagram app.")
-    
 
     def call_ig():
-        cmd_ig: str = f"adb{'' if configs.device_id is None else ' -s ' + configs.device_id} shell am start -n {app_id}/com.instagram.mainactivity.MainActivity"
-        return subprocess.run(
-            cmd_ig, stdout=PIPE, stderr=PIPE, shell=True, encoding="utf8"
-        )
+        try:
+            return device.deviceV2.app_start(app_id, use_monkey=True)
+        except uiautomator2.exceptions.BaseError as exc:
+            return exc
 
-    err = call_ig().stderr.strip()
-    if "Error" in err:
-        logger.error(err.replace(nl, ". "))
+    err = call_ig()
+    if err:
+        logger.error(err)
         return False
-    elif "more than one device/emulator" in err:
-        logger.error(
-            f"{err[9:].capitalize()}, specify only one by using `device: devicename` in your config.yml"
-        )
-        return False
-    elif err == "":
-        logger.debug("Instagram called successfully.")
     else:
-        logger.debug(f"{err.replace('Warning: ', '')}.")
+        logger.debug("Instagram called successfully.")
 
     max_tries = 3
     n = 0
@@ -284,8 +262,6 @@ def open_instagram(device):
         random_sleep(3, 3, modulable=False)
 
     logger.info("Ready for botting!🤫", extra={"color": f"{Style.BRIGHT}{Fore.GREEN}"})
-    audioSettings.talk("bot is ready!")
-    msgErrors.send_slack_message("bot is ready")
 
     random_sleep()
     if configs.args.close_apps:
@@ -711,7 +687,6 @@ def set_time_delta(args):
     logger.info(
         f"Time delta has set to {'' if args.time_delta_session >0 else '-'}{h:02d}:{m:02d}:{s:02d}."
     )
-    # shesacvleli
 
 
 def wait_for_next_session(time_left, session_state, sessions, device):
@@ -726,9 +701,6 @@ def wait_for_next_session(time_left, session_state, sessions, device):
         f"Time left: {hours:02d}:{minutes:02d}:{seconds:02d}.",
         extra={"color": f"{Fore.GREEN}"},
     )
-    audioSettings.talk("The bot stopped for few hours")
-    msgErrors.send_slack_message("The bot stopped for few hours")
-    msgErrors.send_slack_message(f'Next session will start at: {(datetime.now()+ time_left).strftime("%H:%M:%S (%Y/%m/%d)")}')
     try:
         sleep(time_left.total_seconds())
     except KeyboardInterrupt:
